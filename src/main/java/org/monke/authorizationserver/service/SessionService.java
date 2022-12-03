@@ -9,4 +9,5 @@ import org.monke.authorizationserver.entity.response.ValidatedSessionResponse;
 public interface SessionService {
     SessionResponse createSession(RequestSessionCreate requestSessionCreate) throws InvalidCredentialsException;
     ValidatedSessionResponse validateSession(String sessionID) throws InvalidSessionID;
+    void purgeInactiveSessions();
 }
